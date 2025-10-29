@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uzaylul media kit</title>
+    <link rel="icon" type="image/png" href="U Logo T.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #b2775d;
+            --primary-light: #d49a7c;
+            --background: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --light-text: #a0a0a0;
+            --border-color: #333333;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            --gradient: linear-gradient(135deg, #b2775d 0%, #d49a7c 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--gradient);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTIwMCA4MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxwYXRoIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMC4xIiBkPSJNMCw0MDBMMTIwMCw0MDBMMTIwMCw4MDBMMCw4MDBaIE0wLDBMMTIwMCwwTDEyMDAsNDAwTDAsNDAwWiI+PC9wYXRoPjwvc3ZnPg==');
+            opacity: 0.1;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .stats-overview {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .stat-box {
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .about {
+            padding: 4rem 0;
+            background-color: #1a1a1a;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .about-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .about-contact {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--light-text);
+        }
+
+        .about-contact a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .about-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .interaction-card {
+            flex: 0 0 300px;
+            background: var(--gradient);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .interaction-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .interaction-count {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .interaction-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .platforms {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--light-text);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .platform-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-color);
+        }
+
+        .platform-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(178, 119, 93, 0.2);
+        }
+
+        .platform-header {
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .platform-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.8rem;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .youtube { background-color: #FF0000; }
+        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .tiktok { background-color: #000000; }
+        .discord { background-color: #5865F2; }
+        .reddit { background-color: #FF4500; }
+        .twitter { background-color: #1DA1F2; }
+        .twitch { background-color: #9146FF; }
+        .kick { background-color: #53fc18; color: #000; }
+        .roblox { background-color: #e32400; }
+
+        .platform-info {
+            flex-grow: 1;
+        }
+
+        .platform-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+
+        .platform-followers {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .platform-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            text-align: center;
+            background-color: rgba(178, 119, 93, 0.1);
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .platform-link i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .platform-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .platform-link:hover i {
+            transform: translateX(5px);
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .footer-text {
+            color: var(--light-text);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            margin-top: 1.5rem;
+            color: var(--light-text);
+        }
+
+        .contact-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .platform-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-overview {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stat-box {
+                width: 80%;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .interaction-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="U Logo.png" alt="uzaylul">
+            </div>
+            <h1>uzaylul</h1>
+            <p class="subtitle">Media Kit & Sosyal Medya Profilleri</p>
+            
+            <div class="stats-overview">
+                <div class="stat-box">
+                    <div class="stat-number">7,1B+</div>
+                    <div class="stat-label">YouTube Abone</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">5,7B+</div>
+                    <div class="stat-label">Twitch Takipçi</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">430+</div>
+                    <div class="stat-label">TikTok Takipçi</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="about-title">En Havalı İçerik Üreticisi</h2>
+                    <p class="about-description">
+                        2021 yılından beri oyun içerikleri üretiyorum. Maceralara çıkıyoruz, bilgileniyoruz ve eğleniyoruz. Her hafta yeni içeriklerle karşınızdayız.
+                    </p>
+                    <p class="about-contact">
+                        İletişim için: <a href="mailto:onurcelik@uzaylul.com">onurcelik@uzaylul.com</a>
+                    </p>
+                </div>
+                <div class="interaction-card">
+                    <div class="interaction-title">Etkileşimimiz</div>
+                    <div class="interaction-count">667B+</div>
+                    <div class="interaction-label">Görüntüleme</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="platforms">
+        <div class="container">
+            <h2 class="section-title">Platformlarım</h2>
+            <p class="section-subtitle">
+                Aşağıda tüm sosyal medya platformlarındaki hesaplarımı ve takipçi sayılarını bulabilirsiniz.
+            </p>
+            
+            <div class="platform-grid">
+                <!-- YouTube 1 -->
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-icon youtube">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div class="platform-info">
+                            <div class="platform-name">YouTube</div>
+                            <div class="platform-followers">7,1B+ Abone</div>
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/@uzaylul" target="_blank" class="platform-link">
+                        Profili Ziyaret Et <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <!-- YouTube 2 -->
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-icon youtube">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div class="platform-info">
+                            <div class="platform-name">YouTube 2</div>
+                            <div class="platform-followers">216+ Abone</div>
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/@uzaylul2" target="_blank" class="platform-link">
+                        Profili Ziyaret Et <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <!-- YouTube 3 -->
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-icon youtube">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div class="platform-info">
+                            <div class="platform-name">YouTube 3</div>
+                            <div class="platform-followers">34+ Abone</div>
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/@onurcelikyt" target="_blank" class="platform-link">
+                        Profili Ziyaret Et <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <!-- Instagram -->
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="platform-info">
+                            <div class="platform-name">Instagram</div>
+                            <div class="platform-followers">428+ Takipçi</div>
+                        </div>
+                    </div>
+                    <a href="https://www.instagram.com/uzaylul" target="_blank" class="platform-link">
+                        Profili Ziyaret Et <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <!-- TikTok -->
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-icon tiktok">
+                            <i class="fab fa-tiktok"></i>
+                        </div>
+                        <div class="platform-info">
+                            <div class="platform-name">TikTok</div>
+                            <div class="platform-followers">430+ Takipçi</div>
+                        </div>
+                    </div>
+                    <a href="https://www.tiktok.com/@uzaylul" target="_blank" class="platform-link">
+                        Profili Ziyaret Et <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <!-- Discord -->
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-icon discord">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="platform-info">
+                            <div class="platform-name">Discord</div>
+                            <div class="platform-followers">12+ Üye</div>
+                        </div>
+                    </div>
+                    <a href="https://discord.uzaylul.com" target="_blank" class="platform-link">
+                        Sunucuya Katıl <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <!-- Reddit -->
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-icon reddit">
+                            <i class="fab fa-reddit"></i>
+                        </div>
+                        <div class="platform-info">
+                            <div class="platform-name">Reddit</div>
+                            <div class="platform-followers">207+ Üye</div>
+                        </div>
+                    </div>
+                    <a href="https://www.reddit.com/r/uzaylul/" target="_blank" class="platform-link">
+                        Topluluğu Ziyaret Et <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <!-- Twitter/X -->
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-icon twitter">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="platform-info">
+                            <div class="platform-name">Twitter/X</div>
+                            <div class="platform-followers">20+ Takipçi</div>
+                        </div>
+                    </div>
+                    <a href="https://x.com/uzaylul" target="_blank" class="platform-link">
+                        Profili Ziyaret Et <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <!-- Twitch -->
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-icon twitch">
+                            <i class="fab fa-twitch"></i>
+                        </div>
+                        <div class="platform-info">
+                            <div class="platform-name">Twitch</div>
+                            <div class="platform-followers">5,7B+ Takipçi</div>
+                        </div>
+                    </div>
+                    <a href="https://www.twitch.tv/uzaylul" target="_blank" class="platform-link">
+                        Kanalı Ziyaret Et <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <!-- Kick -->
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-icon kick">
+                            <i class="fas fa-fist-raised"></i>
+                        </div>
+                        <div class="platform-info">
+                            <div class="platform-name">Kick</div>
+                            <div class="platform-followers">115+ Takipçi</div>
+                        </div>
+                    </div>
+                    <a href="https://kick.com/uzaylul" target="_blank" class="platform-link">
+                        Kanalı Ziyaret Et <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <!-- Roblox Profil -->
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-icon roblox">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="platform-info">
+                            <div class="platform-name">Roblox Profil</div>
+                            <div class="platform-followers">3.1B+ Takipçi</div>
+                        </div>
+                    </div>
+                    <a href="https://www.roblox.com/users/122482369/profile" target="_blank" class="platform-link">
+                        Profili Ziyaret Et <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <!-- Roblox Topluluk -->
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-icon roblox">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="platform-info">
+                            <div class="platform-name">Roblox Topluluk</div>
+                            <div class="platform-followers">1.1B+ Üye</div>
+                        </div>
+                    </div>
+                    <a href="https://www.roblox.com/communities/8649115/uzaylul#!/about" target="_blank" class="platform-link">
+                        Topluluğu Ziyaret Et <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="U Logo.png" alt="uzaylul">
+            </div>
+            <p class="footer-text">uzaylul - Media Kit</p>
+            <div class="contact-info">
+                İş birlikleri ve iletişim için: 
+                <a href="mailto:onurcelik@uzaylul.com" class="contact-link">onurcelik@uzaylul.com</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
