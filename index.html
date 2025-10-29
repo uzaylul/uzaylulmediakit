@@ -110,6 +110,7 @@
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
+            min-width: 180px;
         }
 
         .stat-box:hover {
@@ -248,6 +249,7 @@
             display: flex;
             align-items: center;
             border-bottom: 1px solid var(--border-color);
+            flex: 1;
         }
 
         .platform-icon {
@@ -261,6 +263,7 @@
             font-size: 1.8rem;
             color: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
         }
 
         .youtube { background-color: #FF0000; }
@@ -274,9 +277,15 @@
         .roblox { background-color: #e32400; }
         .game { background-color: #2e8b57; }
         .tshirt { background-color: #8a2be2; }
+        .mastodon { background-color: #6364ff; }
+        .bluesky { background-color: #1185fe; }
 
         .platform-info {
             flex-grow: 1;
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .platform-name {
@@ -424,6 +433,10 @@
                 <div class="stat-box">
                     <div class="stat-number">430+</div>
                     <div class="stat-label">TikTok Takipçi</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">526+</div>
+                    <div class="stat-label">Video</div>
                 </div>
             </div>
         </div>
@@ -615,6 +628,38 @@
                     </div>
                     <a href="https://kick.com/uzaylul" target="_blank" class="platform-link">
                         Kanalı Ziyaret Et <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <!-- Mastodon -->
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-icon mastodon">
+                            <i class="fab fa-mastodon"></i>
+                        </div>
+                        <div class="platform-info">
+                            <div class="platform-name">Mastodon</div>
+                            <div class="platform-followers">39+ Takipçi</div>
+                        </div>
+                    </div>
+                    <a href="https://mastodon.social/@uzaylul" target="_blank" class="platform-link">
+                        Profili Ziyaret Et <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <!-- Bluesky -->
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <div class="platform-icon bluesky">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="platform-info">
+                            <div class="platform-name">Bluesky</div>
+                            <div class="platform-followers">14+ Takipçi</div>
+                        </div>
+                    </div>
+                    <a href="https://bsky.app/profile/uzaylul.bsky.social" target="_blank" class="platform-link">
+                        Profili Ziyaret Et <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
                 
